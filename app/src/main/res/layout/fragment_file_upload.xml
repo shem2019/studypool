@@ -1,0 +1,82 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Course Name Input -->
+        <EditText
+            android:id="@+id/editTextCourseName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Course Name" />
+
+        <!-- Upload Material -->
+        <Button
+            android:id="@+id/btnUploadMaterial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Course Material" />
+
+        <TextView
+            android:id="@+id/txtFileStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No file selected"
+            android:padding="8dp"/>
+
+        <!-- Pick Exam Date -->
+        <Button
+            android:id="@+id/btnPickExamDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick Exam Date" />
+
+        <TextView
+            android:id="@+id/txtExamDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Exam Date Selected"
+            android:padding="8dp"/>
+
+        <!-- Select CAT Dates -->
+        <Button
+            android:id="@+id/btnAddCAT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add CAT Date" />
+
+        <ListView
+            android:id="@+id/listCATDates"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"/>
+
+        <!-- Add Class Times -->
+        <Button
+            android:id="@+id/btnAddClassTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Class Time" />
+
+        <ListView
+            android:id="@+id/listClassTimes"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"/>
+
+        <!-- Save Course -->
+        <Button
+            android:id="@+id/btnSaveCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Course" />
+    </LinearLayout>
+</ScrollView>

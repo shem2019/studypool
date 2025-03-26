@@ -46,6 +46,14 @@
                     app:cornerRadius="4dp" />
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/study"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:text="Study"
+                    app:cornerRadius="4dp" />
+
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/Assistant"
                     android:layout_width="95dp"
                     android:layout_height="match_parent"

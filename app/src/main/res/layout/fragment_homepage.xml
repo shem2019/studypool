@@ -1,14 +1,150 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".homepage">
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <!-- What's Next Section -->
+        <LinearLayout
+            android:id="@+id/streakCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@drawable/bg_card"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/streakIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/flame"
+                android:contentDescription="Streak Icon"
+                android:layout_gravity="center_vertical" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/tvStreakStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You're on a 3-day streak!"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <ProgressBar
+                    android:id="@+id/streakProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:max="7"
+                    android:progress="3"
+                    android:progressTint="@android:color/holo_orange_light"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/xpSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_card"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/xpLevelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Level 2"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/xpProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:progress="75"
+                android:max="100"
+                android:progressTint="@android:color/holo_blue_light" />
+
+            <TextView
+                android:id="@+id/xpHintText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25 XP to next level"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What's Next"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerUpcoming"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:nestedScrollingEnabled="false"/>
+        <LinearLayout
+            android:id="@+id/todayGoalCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvTodayGoalTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎯 Today’s Goals"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvDueTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CAT due today: Physics"
+                android:textSize="14sp"
+                android:paddingTop="8dp" />
+
+
+            <CheckBox
+                android:id="@+id/checkStudyToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Study something today" />
+        </LinearLayout>
+        <nl.dionsegijn.konfetti.xml.KonfettiView
+            android:id="@+id/konfettiView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+        <Button
+            android:id="@+id/btnStudyTechniques"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🧠 Open Study Techniques" />
+
+    </LinearLayout>
+
+</ScrollView>
