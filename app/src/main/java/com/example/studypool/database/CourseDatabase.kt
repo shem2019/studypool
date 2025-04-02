@@ -4,24 +4,30 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-@Database(entities = [CourseEntity::class], version = 3, exportSchema = false)  // ✅ Increase version number
+
+@Database(
+    entities = [CourseEntity::class, UserEntity::class], // 👈 Add UserEntity here
+    version = 5,
+    exportSchema = false
+)
 abstract class CourseDatabase : RoomDatabase() {
     abstract fun courseDao(): CourseDao
+    abstract fun userDao(): UserDao  // 👈 Add this
 
     companion object {
-        @Volatile private var instance: CourseDatabase? = null
+        @Volatile private var INSTANCE: CourseDatabase? = null
 
         fun getDatabase(context: Context): CourseDatabase {
-            return instance ?: synchronized(this) {
-                val db = Room.databaseBuilder(
+            return INSTANCE ?: synchronized(this) {
+                val instance = Room.databaseBuilder(
                     context.applicationContext,
                     CourseDatabase::class.java,
                     "study_database"
                 )
-                    .fallbackToDestructiveMigration() // ✅ Auto-reset database on schema changes
+                    .fallbackToDestructiveMigration()
                     .build()
-                instance = db
-                db
+                INSTANCE = instance
+                instance
             }
         }
     }

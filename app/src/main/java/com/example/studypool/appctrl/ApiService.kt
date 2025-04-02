@@ -5,6 +5,8 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Headers
@@ -82,7 +84,22 @@ data class UpcomingItem(
     val courseName: String
 )
 
+data class ApiResponse(
+    val success: Boolean,
+    val message: String
+)
+data class AdminLoginRequest(val email: String, val password: String)
+data class AdminLoginResponse(val success: Boolean, val message: String)
 
+
+data class GenericResponse(
+    val success: Boolean,
+    val message: String
+)
+data class LeaderboardItem(
+    val name: String,
+    val xp: Int
+)
 
 interface ApiService {
     //logs
@@ -110,6 +127,26 @@ interface ApiService {
 
     @POST("user_login.php")
     fun loginUser(@Body request: UserLoginRequest): Call<UserLoginResponse>
+
+    @FormUrlEncoded
+    @POST("studyadminlogin.php")
+    fun loginAdmin(
+        @Field("email") email: String,
+        @Field("password") password: String
+    ): Call<ApiResponse>
+
+    @POST("studyadminlogin.php")
+    fun loginAdminSecure(
+        @Body body: Map<String, String>
+    ): Call<AdminLoginResponse>
+
+    @POST("studyadminlogin.php")
+    fun loginStudyAdmin(@Body request: AdminLoginRequest): Call<AdminLoginResponse>
+
+    @POST("studyadmin_register.php")
+    fun registerStudyAdmin(@Body body: Map<String, String>): Call<GenericResponse>
+
+
 
 
 }

@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:padding="12dp"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_card"
+    android:layout_marginBottom="8dp">
+
+    <ImageView
+        android:id="@+id/rankTrophy"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/user"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="Trophy" />
+
+    <TextView
+        android:id="@+id/rankPosition"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:text="alice@student.com" />
+
+    <TextView
+        android:id="@+id/userXP"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text="350 XP"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_blue_dark" />
+</LinearLayout>

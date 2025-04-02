@@ -30,7 +30,6 @@ class Learningdash : AppCompatActivity() {
         setContentView(R.layout.activity_learningdash)
         val homebtn=findViewById<Button>(R.id.Home)
         val fileuploadbtn=findViewById<Button>(R.id.File)
-        val assistantbtn=findViewById<Button>(R.id.Assistant)
         val profilebtn=findViewById<Button>(R.id.Profile)
         val studybtn=findViewById<Button>(R.id.study)
         val dashboardframe=findViewById<FrameLayout>(R.id.framedash)
@@ -47,9 +46,6 @@ class Learningdash : AppCompatActivity() {
             loadFragment(StudyFragment())
         }
 
-        assistantbtn.setOnClickListener {
-            loadFragment(assistant())
-        }
         profilebtn.setOnClickListener {
             loadFragment(profile())
         }

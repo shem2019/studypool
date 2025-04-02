@@ -21,6 +21,27 @@
         android:theme="@style/Theme.Studypool"
         tools:targetApi="31">
         <activity
+            android:name=".admin.AdminInsightsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminLeaderboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminCourseManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminUserListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminUsersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminReportsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminDashboardActivity"
+            android:exported="false" />
+        <activity
             android:name=".InAppPdfViewerActivity"
             android:exported="false" />
         <activity

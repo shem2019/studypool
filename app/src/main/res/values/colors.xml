@@ -2,4 +2,33 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- Brand Colors -->
+    <color name="bg_light">#F7F0E2</color> <!-- Light cream -->
+    <color name="blue_primary">#2D5B93</color> <!-- Mid blue -->
+    <color name="blue_dark">#183E4E</color> <!-- Dark blue -->
+    <color name="mustard_accent">#E1AA4C</color> <!-- Mustard -->
+
+    <!-- Optional Utility Colors -->
+    <color name="success_green">#388E3C</color>
+    <color name="error_red">#D32F2F</color>
+    <color name="light_gray">#EEEEEE</color>
+    <color name="teal_700">#179898</color>
+
+        <color name="colorPrimary">#3F51B5</color>
+        <color name="colorPrimaryDark">#1A237E</color>
+        <color name="colorAccent">#FFA726</color>
+
+        <color name="backgroundLight">#f5f7fb</color>
+        <color name="cardBackground">#FFFFFF</color>
+        <color name="successGreen">#388E3C</color>
+        <color name="warningOrange">#FFA726</color>
+        <color name="dangerRed">#E53935</color>
+        <color name="textGray">#666666</color>
+    <color name="light_cream">#FFF9F0</color>
+    <color name="dark_blue">#263A6C</color>
+    <color name="mustard">#FFD54F</color>
+
+    <color name="disabledGray">#CCCCCC</color>
+
+
 </resources>

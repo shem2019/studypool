@@ -11,4 +11,7 @@ interface CourseDao {
     suspend fun getAllCourses(): List<CourseEntity>
     @Delete
     suspend fun deleteCourse(course: CourseEntity)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAllCourses(courses: List<CourseEntity>)
+
 }

@@ -59,6 +59,7 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation ("nl.dionsegijn:konfetti-xml:2.0.2")
     //implementation ("com.github.barteksc:android-pdf-viewer:3.2.0-beta.1")
+    implementation (libs.mpandroidchart)
 
 
 
